@@ -1,9 +1,3 @@
- $(function() {
-            $.getJSON(
-              'https://api.ipify.org?format=jsonp&callback=?',
-              function (data) {
-                $(".ipdata").text('{"ip":"' + data.ip + '"}');
-                Prism.highlightAll();
-              }
-            );
-          });
+function getIP(json) {
+	document.write("My public IP address is: ", json.ip);
+}
